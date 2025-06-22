@@ -40,7 +40,7 @@ src/
 
 ```bash
 git clone git@github.com:ivandanielcruzs/icecream-app-cqrs.git
-cd icecream-app
+cd icecream-app-cqrs
 npm install
 ```
 
