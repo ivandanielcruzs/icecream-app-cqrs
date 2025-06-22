@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "ef4f8de0-e544-41c2-aba2-6007314e7d5e",
+		"name": "CQRS-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24046708"
+	},
+	"item": [
+		{
+			"name": "Get All Ice creams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}icecreams",
+					"host": [
+						"{{host}}icecreams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new ice cream flavor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flavor\": \"vanilla\",\r\n    \"price\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}icecreams",
+					"host": [
+						"{{host}}icecreams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update by Id a Ice cream flavor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flavor\": \"vanilla\",\r\n    \"price\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}icecreams/1",
+					"host": [
+						"{{host}}icecreams"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ice cream flavor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}icecreams/1",
+					"host": [
+						"{{host}}icecreams"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
